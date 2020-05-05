@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" />
+    <title>Harry Potter</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        .header{
+            width: 100%;
+            background-color: rgba(77, 27, 12, 0.678);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .anim1 {
+            width: 100%;
+            height: 5px;
+            background-color: maroon;
+            position: static;
+            animation-name: head;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes head {
+            0%   {background-color:maroon; left:0%; top:0px;}
+            25%  {background-color:lightsalmon; left:100%; top:0px;}
+            50%  {background-color:maroon; left:100%; top:0px;}
+            75%  {background-color:lightsalmon; left:0%; top:0px;}
+            100% {background-color:maroon; left:0%; top:0px;}
+        }
+        .name{
+            padding: 5px;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li{
+            background-color: rgba(77, 27, 12, 0.678);
+            padding: 5px;
+            margin-bottom: 7px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .menu li:hover {
+            background-color: rgba(44, 12, 2, 0.884);
+            color: lightsalmon;
+        }
+        .anim2 {
+            width: 40%;
+            padding:5px 5px 5px 5px;
+            text-align: center;
+            margin-top: 40px;
+            background-color: rgba(44, 12, 2, 0.884);
+            color: lightsalmon;
+            font-weight: bold;
+            position: relative;
+            animation: mymove 5s infinite alternate;
+        }
+
+        #div1 {animation-timing-function: linear;}
+        #div2 {animation-timing-function: ease;}
+        #div3 {animation-timing-function: ease-in;}
+        #div4 {animation-timing-function: ease-out;}
+        #div5 {animation-timing-function: ease-in-out;}
+
+        @keyframes mymove {
+            from {left: 0%;}
+            to {left: 60%;}
+        }
+        .dis{
+            text-align: center;
+            color: rgba(44, 12, 2, 0.884);
+            position: static;
+            animation-name: dis;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes dis {
+            0%   {color:rgba(44, 12, 2, 0.884);}
+            15%   {color:maroon;}
+            25%  {color:lightsalmon;}
+            35%   {color:maroon;}
+            50%  {color:rgba(44, 12, 2, 0.884);}
+            65%   {color:maroon;}
+            75%  {color:lightsalmon;}
+            85%   {color:maroon;}
+            100% {color:rgba(44, 12, 2, 0.884);}
+        }
+        .hgif{
+            width: 100%;
+        }
+        .trans{
+            width: 100px;
+            height: 250px;
+            transition: width 2s;
+        }
+        .trans:hover {
+            width: 100%;
+        }
+        .prof{
+            background-color: rgba(77, 27, 12, 0.678);
+            padding: 3px;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            width: 100%;
+            height: 300px;
+            border: 0px solid;
+            overflow: auto;
+        }
+        #profs{
+            font-size: 26px;
+        }
+        footer{
+            background-color: rgba(77, 27, 12, 0.678);
+            font-size: 12px;
+            padding: 3px;
+            text-align: center;
+        }
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <img class="icon" src="images/icon.png" width="15%" height="15%">
+        <!-- <h1 class="name">HARRY POTTER</h1> -->
+    </section>
+    <div class="anim1"></div>
+    
+    <section class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li>The Sorcerers Stone</li>
+                <li>The Chamber of Secrets</li>
+                <li>The prison of Azkaban</li>
+                <li>Goblet of Fire</li>
+                <li>The Order of the Phoenix</li>
+                <li>The Half blood Prince</li>
+                <li>Deathly Hallows</li>
+            </ul>
+            
+            <div id="div1" class="anim2">HARRY</div>
+            <div id="div2" class="anim2">HERMIONE</div>
+            <div id="div3" class="anim2">WEASLEY</div>
+            <div id="div4" class="anim2">DRACO</div>
+            <div id="div5" class="anim2">CEDRIC</div>
+
+        </div>
+    
+    <section>
+        <div class="col-6 col-s-9">
+            <h2 class="dis">DISCOVER YOUR HOGWARTS HOUSE</h2>
+            <img class="hgif" src="images/h.gif">
+            <div class="trans"><img src="images/Harry-Potter-Logo.png" width="100%"></div>
+        </div>
+        
+
+    </section>
+
+    <section class="col-3 col-s-12">
+        <div class="prof">
+            <h2 id="profs">Professors</h2>
+            <h3>Albus Dumbledore</h3>
+            <p>Headmaster of Hogwarts and Supreme Mugwump of the International Confederation of Wizards and Chief Warlock of the Wizengamot. The finest wizard of his generation, Dumbledore is the only wizard that Voldemort is afraid of. Tall, thin and very old, he has blue eyes, a crooked nose and a long silver beard. He wears half-moon spectacles and a long purple cloak. He has a scar on his left knee which is a perfect map of the London Underground. As a schoolboy, he was in Gryffindor house.</p>
+            <h3>Minerva McGonagall</h3>
+            <p>Deputy Headmistress of Hogwarts. She is a rather serious-looking woman, with jet-black hair scraped back into a tight bun on her head. She wears square glasses and an emerald-green cloak. Professor McGonagall is head of Gryffindor house and is the Transfiguration teacher. If you’ve read Chapter One of Harry Potter and the Philosopher’s/Sorcerer’s Stone you will know that she can turn into a tabby cat!</p>
+            <h3>Severus Snape</h3>
+            <p>Potions master at Hogwarts, although apparently he knows an awful lots about the Dark Arts. He is tall and thin with sallow skin, greasy black hair and a hooked nose. He teaches his classes in the dungeons, where there are pickled animals floating in jars. Snape appears to hate Harry Potter, whilst Draco Malfoy is one of his favourite students. Though that isn’t surprising, as he is also head of Slytherin house.</p>
+        </div>
+        <img src="images/hwh.png" width="70%">
+    </section>
+    </section>
+    <footer>
+        <p class="a">© WIZARDING WORLD 2020</p>
+        <p class="b">WIZARDING WORLD IS A PARTNERSHIP BETWEEN SHAZZADUR RAHMAN AND POTTERMORE DELIVERING OFFICIAL UPDATES AND PRODUCTS FROM THE WIZARDING WORLD AND ITS PARTNERS.</p>
+    </footer>
+</body>
+</html>
