@@ -75,6 +75,15 @@ body{
     from {left: 0%;}
     to {left: 60%;}
 }
+.icon{
+    position: relative;
+    animation: iconmove 15s infinite alternate;
+    animation-timing-function: ease-in;
+}
+@keyframes iconmove {
+    from {left: 0%;}
+    to {left: 85%;}
+}
 .dis{
     text-align: center;
     color: rgba(44, 12, 2, 0.884);
